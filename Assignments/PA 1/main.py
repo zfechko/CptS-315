@@ -37,13 +37,6 @@ def apriori_pass_2(dataset, support, singles):
     """
     finds the doubles in the dataset
     """
-    double_count = {}
-    for basket in dataset:
-        for item in combinations(basket, 2):
-            if item not in double_count:
-                double_count[item] = 1
-            else:
-                double_count[item] += 1
-    return {key: value for key, value in double_count.items() if value >= support}
+    
     
 
