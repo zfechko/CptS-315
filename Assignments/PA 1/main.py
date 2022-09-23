@@ -33,10 +33,75 @@ def apriori_pass_1(dataset, support):
                 item_count[item] += 1
     return {key: value for key, value in item_count.items() if value >= support}
 
-def apriori_pass_2(dataset, support, singles):
+def apriori_pass_2(dataset, singles, support):
     """
-    finds the doubles in the dataset
+    finds the frequent pairs in the dataset
     """
+    item_counts = {} #dictionary of item counts
+    line_count = 0
+    combos = set(combinations(singles, 2)) #set of tuples that have all possible combinations of 2 items
+    for line in dataset:
+        for combination in combos: #for each combination
+            if combination[0] in line and combination[1] in line: #if both items are in the same line
+                if combination not in item_counts: #if the combination is not in the dictionary
+                    item_counts[combination] = 1 #add it to the dictionary and set its value to 1
+                else:
+                    item_counts[combination] += 1 #if it is in the dictionary, increment its value
+        line_count += 1
+    return {key: value for key, value in item_counts.items() if value >= support} #return the dictionary with only the items that meet the support
+
+
+def apriori_pass_3(dataset, support, singles):
+    """
+    finds the frequent triples in the dataset
+    """
+    item_counts = {} #dictionary of item counts
+    line_count = 0
+    combos = set(combinations(singles, 3)) #set of tuples that have all possible combinations of 3 items
+    for line in dataset:
+        for combination in combos:
+            if combination[0] in line and combination[1] in line and combination[2] in line:
+                if combination not in item_counts:
+                    item_counts[combination] = 1
+                else:
+                    item_counts[combination] += 1
+        line_count += 1
+    return {key: value for key, value in item_counts.items() if value >= support}
+
+def calculate_doubles_confidence(frequent_pairs, frequent_singles):
+    """
+    calculates the confidence for each pair
+    """
+
+def calculate_triples_confidence(frequent_triples, frequent_pairs, frequent_singles):
+    """
+    calculates the confidence for each triple
+    """
+
+def dump_to_file(pairs_output, triples_output):
+    """
+    dumps the output to a file following the format in the assignment description
+    """
+    with open(OUTFILE, 'w') as outfile:
+        #write the pairs + associated confidence
+        outfile.write("Output A:\n")
+        
+
+def main():
+    """
+    Carries out assignment flow
+    - reads in the data
+    - finds the pairs that fit the support
+    - finds the triples that fit the support
+    - calculates confidence value for each pair/triple
+    - dumps output to file
+    """
+    groomed_data = read_infile()
+    support_singles = apriori_pass_1(groomed_data, SUPPORT)
+    singles = support_singles.keys()
+    support_pairs = apriori_pass_2(groomed_data, singles, SUPPORT)
+
     
-    
+if __name__ == '__main__':
+    main()
 
