@@ -16,7 +16,7 @@ Use the online browsing behavior dataset provided. Each line represents a custom
 - Identify pairs of items $(X,Y)$ such that the support of $\{X,Y\}$ is at least 100. For all such pairs, compute the confidence scores of the corresponding association rules $X\rightarrow Y, Y\rightarrow X$. Sort the rules in decreasing order of confidence scores and list the top 5 rules in the writeup. Break ties, if any, by lexicographically increasing order on the left hand side of the rule
 - Identify item triples $(X, Y, Z)$ such that the support of $\{X, Y, Z\}$ is at 
 least 100. For all such triples, compute the confidence scores of the 
-corresponding association rules: (X, Y) ⇒ Z, (X, Z) ⇒ Y, (Y, Z) ⇒ X. 
+corresponding association rules: $(X, Y) \rightarrow Z, (X, Z) \rightarrow Y, (Y, Z) \rightarrow X$. 
 Sort the rules in decreasing order of confidence scores and list the top 5 
 rules in the writeup. Order the left-hand-side pair lexicographically and 
 break ties, if any, by lexicographical order of the first then the second 
