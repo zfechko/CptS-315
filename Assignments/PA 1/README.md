@@ -47,6 +47,8 @@ FRO11987 FRO18919 GRO68850 0.4015
         - `<item 1> <item 2> <item 3> <confidence> meaning {item 1, item 2} => item 3`
 
 ### Instructions to run
-- Libraries used: 
+- Libraries used:
+    - itertools combinations, chain 
+    - progressbar
 - To run the program
     - Either run `main.py` or `run_code.sh`
