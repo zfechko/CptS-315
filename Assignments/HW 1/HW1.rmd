@@ -3,7 +3,7 @@ title: "Cpts 315 HW 1"
 author: "Zach Fechko"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-    
+    pdf_document: default
     prettydoc::html_pretty:
         theme: hpstr
         highlight: github
