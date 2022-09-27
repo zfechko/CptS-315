@@ -150,8 +150,8 @@ def main():
     """
     Carries out assignment flow
     - reads in the data
-    - finds the pairs that fit the support s = 100
-    - finds the triples that fit the support s = 100
+    - finds the pairs that fit the support s >= 100
+    - finds the triples that fit the support s >= 100
     - calculates confidence value for each pair/triple
     - dumps output to file
     """
