@@ -2,7 +2,10 @@
 title: CptS 315 - HW 2
 author: Zach Fechko (011711215)
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
-output: html_document
+output: 
+    html_document: default
+    pdf_document:
+        pandoc_args: ["--defaults=C:/Users/zfech/AppData/Local/Pandoc/dracula.yaml"]
 ---
 ***
 
