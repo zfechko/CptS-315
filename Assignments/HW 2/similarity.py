@@ -5,14 +5,18 @@ from numpy.linalg import norm
 # Read in the data
 ratings = pd.read_csv('ratings.csv').set_index('User')
 
-def jaccard(a, b):
+def jaccard(a: list, b: list):
     """
     Calculates the Jaccard similarity between two lists.
     """
-    a = set(a)
-    b = set(b)
-    c = a.intersection(b)
-    return float(len(c)) / (len(a) + len(b) - len(c))
+    set_a = set(a)
+    set_b = set(b)
+    set_a.remove(0) #removing because rating only goes 1-5
+    set_b.remove(0)
+    union = len(set_a.union(set_b))
+    intersection = len(set_a.intersection(set_b))
+    print(union, intersection)
+    return float(intersection / union)
 
 def cosine(a: list, b: list):
     """
@@ -28,5 +32,4 @@ def normalize_matrix(matrix: pd.DataFrame):
     """
     return matrix.sub(matrix.mean(axis=1), axis=0)
 
-print(ratings.sub(1, axis=0))
-
+print(jaccard(list(ratings.loc["User 1"]), list(ratings.loc["User 2"])))
