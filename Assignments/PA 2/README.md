@@ -7,7 +7,7 @@ a. Construct the profile of each item (i.e. movie). At the minimum you should us
 
 b. Compute similarity score for all item-item (movie-movie) pairs. You will use the *centered cosine* similarity metric that we discussed in class.
 
-c. Comput the neighborhood set $N$ for each item. You will select the movies that have the highest similarity score for the given movie. Use a neighborhood of size $5$. Break ties using lexicographic ordering over movie-IDs.
+c. Compute the neighborhood set $N$ for each item. You will select the movies that have the highest similarity score for the given movie. Use a neighborhood of size $5$. Break ties using lexicographic ordering over movie-IDs.
 
 d. Estimate the ratings of other users who didn't rate this item using the neighborhood set. Repeat for each item
 
@@ -29,3 +29,8 @@ Your prograpm should output top 5 recommendations for each user.
 - Line 1 should have the first user-id followed by the movie IDs of recommended movies.
 - Line 2 should have the second user-id followed by the movie IDs of recommended movies
 - Repeat for each user in the dataset
+
+## Notes
+- Check if rating is 0
+- If it is 0
+- 
