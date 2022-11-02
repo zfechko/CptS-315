@@ -63,7 +63,7 @@ In the pre-processing step, you will convert fortune cookie messages into featur
 4. $\hat{y}_t = \text{arg max}_{y \in \{1, 2, \dots, k\}} w_y * x_t$ predict using current weights
 5. **if** mistake **then**
 6. $w_{yt} = w_{yt} + \eta * x_t$ update weights
-7. $w_{\hat{y}t} = w_{\hat{y}t} - \eta * x_t$ update weights
+7. $w_{\hat{y} t} = w_{\hat{y}t} - \eta * x_t$ update weights
 8. **end if**
 9. **end for**
 10. **end for**
