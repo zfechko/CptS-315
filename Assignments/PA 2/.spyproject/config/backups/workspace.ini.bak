@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['main.py', 'README.md', 'similarity-matrix-debugging-information.csv', '..\\..\\..\\CptS215\\Student Submissions\\ford_renae\\AVLTree.py']
+recent_files = ['main.py', 'README.md', 'similarity-matrix-debugging-information.csv']
 
 [main]
 version = 0.2.0
