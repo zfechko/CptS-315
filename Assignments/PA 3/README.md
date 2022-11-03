@@ -39,9 +39,9 @@ In the pre-processing step, you will convert fortune cookie messages into featur
 1. Initialize the weights $w = 0$
 2. **for** each training iteration $\text{itr} \in \{1, 2, \dots, T\}$ **do**
 3. **for** each training example $(x_t, y_t) \in D$ **do**
-4. $\hat{y}_t = \text{sign}(w * x_t)$ predict using current weights
+4. $\hat{y}_t = \text{sign}(w \cdot x_t)$ predict using current weights
 5. **if** mistake **then**
-6. $w = w + \eta * y_t * x_t$ update the weights
+6. $w = w + \eta \cdot y_t \cdot x_t$ update the weights
 7. **end if**
 8. **end for**
 9. **end for**
@@ -50,7 +50,7 @@ In the pre-processing step, you will convert fortune cookie messages into featur
 
 **a)** Compute the number of mistakes during each iteration (1 to 20)  
 **b)** Compute the training accuracy and testing accuracy after each iteration (1 to 20)  
-**c)** Compute the training accuracy and testing accuracy after 20 iterations withy standard perceptron and averaged perceptron
+**c)** Compute the training accuracy and testing accuracy after 20 iterations with standard perceptron and averaged perceptron
 
 #### Algorithm 2 Online Multi-Class Classifier Learning Algorithm
 ***
@@ -60,10 +60,10 @@ In the pre-processing step, you will convert fortune cookie messages into featur
 1. Initialize the weights $w_1, w_2, \dots, w_k = 0$  
 2. **for** each training iteration $\text{itr} \in \{1, 2, \dots, T\}$
 3. **for** each training example $(x_t, y_t) \in D$ **do**
-4. $\hat{y}_t = \text{arg max}_{y \in \{1, 2, \dots, k\}} w_y * x_t$ predict using current weights
+4. $\hat{y}_t = \text{arg max}_{y \in \{1, 2, \dots, k\}} w_y \cdot x_t$ predict using current weights
 5. **if** mistake **then**
-6. $w_{yt} = w_{yt} + \eta * x_t$ update weights
-7. $w_{\hat{y} t} = w_{\hat{y}t} - \eta * x_t$ update weights
+6. $w_{yt} = w_{yt} + \eta \cdot x_t$ update weights
+7. $w_{\hat{y} t} = w_{\hat{y}t} - \eta \cdot x_t$ update weights
 8. **end if**
 9. **end for**
 10. **end for**
