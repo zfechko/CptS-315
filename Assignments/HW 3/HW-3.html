@@ -381,7 +381,7 @@ display: none;
 
 <h1 class="title toc-ignore">CptS 315 - HW 3</h1>
 <h4 class="author">Zach Fechko (011711215)</h4>
-<h4 class="date">04 November, 2022</h4>
+<h4 class="date">15 November, 2022</h4>
 
 </div>
 
@@ -389,7 +389,11 @@ display: none;
 <ul>
 <li><a href="#question-1" id="toc-question-1">Question 1</a>
 <ul>
-<li><a href="#answer" id="toc-answer">Answer</a></li>
+<li><a href="#answer" id="toc-answer">Answer</a>
+<ul>
+<li><a href="#a" id="toc-a">A</a></li>
+<li><a href="#b" id="toc-b">B</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#question-2" id="toc-question-2">Question 2</a>
 <ul>
@@ -401,11 +405,19 @@ display: none;
 </ul></li>
 <li><a href="#question-4" id="toc-question-4">Question 4</a>
 <ul>
-<li><a href="#answer-3" id="toc-answer-3">Answer</a></li>
+<li><a href="#answer-3" id="toc-answer-3">Answer</a>
+<ul>
+<li><a href="#intuition" id="toc-intuition">Intuition</a></li>
+<li><a href="#psuedocode" id="toc-psuedocode">Psuedocode</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#question-5" id="toc-question-5">Question 5</a>
 <ul>
-<li><a href="#answer-4" id="toc-answer-4">Answer</a></li>
+<li><a href="#answer-4" id="toc-answer-4">Answer</a>
+<ul>
+<li><a href="#part-1" id="toc-part-1">Part 1</a></li>
+<li><a href="#part-2" id="toc-part-2">Part 2</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#question-6" id="toc-question-6">Question 6</a>
 <ul>
@@ -430,6 +442,23 @@ Is the decision boundary of averaged perceptron linear? Why or why not?
 </ol>
 <div id="answer" class="section level2">
 <h2>Answer</h2>
+<div id="a" class="section level3">
+<h3>A</h3>
+<p>The decision boundary of the voted perceptron is not linear. If we
+have two weight vectors <span class="math inline">\((0, 1)\)</span> and
+<span class="math inline">\((-1, 0)\)</span> and we tried to discern
+positive and negative examples. Both of these vectors would last the
+same number of iterations in training, and only instances which would be
+positive would be in the top left quadrant.</p>
+</div>
+<div id="b" class="section level3">
+<h3>B</h3>
+<p>The decision boundary of the averaged perceptron is linear. If we use
+the same example from part A, we would get a linear boundary because the
+average of the two vectors is <span class="math inline">\(\frac{1(0, 1)
++ 1(-1, 0)}{2} = (-\frac{1}{2}, \frac{1}{2})\)</span> which is a linear
+boundary.</p>
+</div>
 </div>
 </div>
 <div id="question-2" class="section level1">
@@ -445,6 +474,10 @@ the perceptron algorithm to be able to leverage this extra
 information?</p>
 <div id="answer-1" class="section level2">
 <h2>Answer</h2>
+<p>We can modify the perceptron algorithm to leverage this extra
+information by multiplying the weight vector by the importance weight of
+the example. This will allow us to weight the importance of each example
+and allow us to learn from the examples that are more important.</p>
 </div>
 </div>
 <div id="question-3" class="section level1">
@@ -458,6 +491,13 @@ the accuracy of positive examples. How will you modify the perceptron
 algorithm to solve this learning problem? Explain your approach.</p>
 <div id="answer-2" class="section level2">
 <h2>Answer</h2>
+<p>What we could do to modify the perceptron algorithm to solve this
+learning problem is to weight the positive examples more than the
+negative examples. We could do this by multiplying the weight vector by
+the number of positive examples divided by the number of negative
+examples. This would allow us to weight the positive examples more than
+the negative examples and allow us to learn from the positive examples
+more than the negative examples.</p>
 </div>
 </div>
 <div id="question-4" class="section level1">
@@ -506,6 +546,40 @@ describe the basic intuition; how the weight updates will be done; and
 psuedocode for the entire algorithm.</p>
 <div id="answer-3" class="section level2">
 <h2>Answer</h2>
+<div id="intuition" class="section level3">
+<h3>Intuition</h3>
+<p>The intuition for the problem is:</p>
+<ol style="list-style-type: decimal">
+<li>The model produces a list of candidates in descending order of
+quality.</li>
+<li>If a candidate is better than another based on the score <span class="math inline">\((k, l)\)</span>, they will be placed ahead of the
+other candidate in the final list.</li>
+<li>For each pair of candidates in pair <span class="math inline">\(\mathcal{P}\)</span>, each candidate will be
+compared to each other to make the final list</li>
+<li>The candidates who compare better than others will be placed higher
+on the list</li>
+<li>If <span class="math inline">\(k \succ l\)</span>, then <span class="math inline">\(A &gt; 0\)</span> and the candidate makes the
+final list</li>
+<li>If <span class="math inline">\(k \leq l\)</span>, then <span class="math inline">\(A \leq 0\)</span> and the candidate does not make
+the final list</li>
+<li>The bias <span class="math inline">\(B\)</span> can be used to
+select the first <span class="math inline">\(B\)</span> candidates in
+the final list</li>
+</ol>
+</div>
+<div id="psuedocode" class="section level3">
+<h3>Psuedocode</h3>
+<pre><code>1. set b = number of desired candidates based on demand
+2. for each set of candidates in the pool based on the score (k, l)
+    - Activation = weight * inputs + bias
+    - if activation &gt; 0
+        - output = 1
+    - else
+        - output = 0
+    - otherwise if lk &lt;= 1, then Activation &lt;= 0 and the candidate will not appear in final list
+3. Get final list of candidates in descending order based on selection capability and merit
+4. select first b candidates from the final list</code></pre>
+</div>
 </div>
 </div>
 <div id="question-5" class="section level1">
@@ -535,6 +609,21 @@ many of the training examples are support vectors?
 </ul>
 <div id="answer-4" class="section level2">
 <h2>Answer</h2>
+<div id="part-1" class="section level3">
+<h3>Part 1</h3>
+<p>The decision boundary of the CLOSE classifier is a linear hyperplane
+of the form <span class="math inline">\(\text{sign}(w \cdot x +
+b)\)</span>. The values of <span class="math inline">\(w\)</span> and
+<span class="math inline">\(b\)</span> can be computed in terms of <span class="math inline">\(C_+\)</span> and <span class="math inline">\(C_-\)</span> as follows: <span class="math inline">\(w = C_+ - C_-\)</span> and <span class="math inline">\(b = -\frac{1}{2}(C_+ + C_-)\)</span></p>
+</div>
+<div id="part-2" class="section level3">
+<h3>Part 2</h3>
+<p>The dual weights (<span class="math inline">\(\alpha\)</span>’s) can
+be computed as follows: <span class="math inline">\(\alpha_i = y_i \cdot
+(w \cdot x_i + b)\)</span> There are <span class="math inline">\(n_+\)</span> support vectors, which means that the
+majority of the training examples are used to support the decision
+boundary.</p>
+</div>
 </div>
 </div>
 <div id="question-6" class="section level1">
@@ -546,6 +635,98 @@ few useful things to know about machine learning</a></p>
 <div style="page-break-after: always;"></div>
 <div id="answer-5" class="section level2">
 <h2>Answer</h2>
+<p>The article <em>A few useful things to know about machine
+learning</em> by Pedro Domingos is a brief summary of the main points of
+machine learning. The article is broken down into 9 main sections, each
+of which is a main point of machine learning.<br />
+The 9 sections are:</p>
+<ol style="list-style-type: decimal">
+<li>Learning = Representation + Evaluation + Optimization
+<ul>
+<li>This section addresses the fact that it’s hard to choose the best
+algorithm for a given problem.</li>
+<li>The key for not getting lost in the sea of algorithms is to know
+that it consists of combinations of 3 components, how the data is
+represented, how the outcome is evalueated, and how to find the best
+algorithm/parameters.</li>
+</ul></li>
+<li>It’s generalization that counts
+<ul>
+<li>The main goal is to be able to generalize beyond the examples in the
+training set and handle new unseen data</li>
+<li>It’s unlikely that we will encounter the exact same samples when we
+start testing</li>
+<li>It’s generally good practice to split your training data into a
+number of subsets and use cross validation to test the model</li>
+<li>Using the same set of data for training and testing brings the
+illusion of success, meaning it will look accurate, but it’s essentially
+the same as just memorizing the answers to a test instead of learning
+the concepts.</li>
+</ul></li>
+<li>Overfitting has many faces
+<ul>
+<li>Overfitting is when you have great results with the training data
+but poor results with the testing data.</li>
+<li>Domingos says that overfitting can come in “many forms that are not
+immediately obvious”</li>
+<li>He also talks about dividing generalization error into bias
+(accuracy) and variance (precision) and selecting a model based on how
+the model is behaving
+<ul>
+<li>Linear models have high bias</li>
+<li>Decision trees have high variance but low bias</li>
+</ul></li>
+</ul></li>
+<li>Intuition fails in high dimensions
+<ul>
+<li>Domingos refers to a concept called the curse of dimensionality,
+which means that machine learning algorithms start to suffer as the
+demensionality of the data increases</li>
+<li>This is because the ratio between the number of training examples
+and the number of features decreases extremely low</li>
+<li>It’s important to choose the most relevant features to avoid feeding
+noise to your learner.</li>
+</ul></li>
+<li>Theoretical guarantees are not what they seem
+<ul>
+<li>Just because a model has a theoretical guarantee, it doesn’t mean
+that it will work in practice</li>
+</ul></li>
+<li>Feature Engineering is the key
+<ul>
+<li>Domingos calls feature engineering the most important factor of
+machine learning</li>
+<li>If the features correlate well with the class, then learning is
+going to be really easy</li>
+<li>He says that it’s the most interesting parts of machine learning and
+attributes it to “black art”</li>
+</ul></li>
+<li>More data beats a cleverer algorithm
+<ul>
+<li>When your model isn’t that accurate, you reach a crossroads
+situation, where you can either “design a better learning algorithm, or
+gather more data”, Domingos recommends the latter.</li>
+<li>It’s often quicker to just get more data than build a new
+algorithm</li>
+<li>Algorithms learn from data and the more data you have, the more
+accurate the model will be because it has more examples to learn</li>
+</ul></li>
+<li>Learn many models, not just one
+<ul>
+<li>In this section Domingos talks about the importance of ensemble
+learning, saying “one would test a lot of models and select the best
+model”</li>
+<li>He also talks about a better approach which is to combine the
+strengths of multiple models into one super model.</li>
+</ul></li>
+<li>Simplicity does not imply accuracy
+<ul>
+<li>“Given two classifiers with the same training error, the simpler of
+the two will likely have the lowest test error”</li>
+<li>This section essentially tells the reader to follow Occam’s razor,
+opting for the simpler model most of the time.</li>
+</ul></li>
+</ol>
 </div>
 </div>
 
