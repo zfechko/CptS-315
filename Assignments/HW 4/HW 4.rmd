@@ -3,9 +3,7 @@ title: "CptS 315 - HW 4"
 author: "Zach Fechko (011711215)"
 date: "`r format(Sys.Date(), '%d %B, %Y')`"
 output: 
-    html_document:
-        theme: spacelab
-        toc: true
+    rmdformats::robobook:
     pdf_document:
         toc: true
         pandoc_args: --defaults=C:/Users/zfech/AppData/Local/Pandoc/dracula.yaml
@@ -15,13 +13,15 @@ output:
 ***
 
 # Q1
-Suppose you are given the following multi-class classification training dta, where each input example has 3 features and output label takes a value from *good*, *bad*, and *ugly*
+Suppose you are given the following multi-class classification training data, where each input example has 3 features and output label takes a value from *good*, *bad*, and *ugly*
 
-- $X_1 = (0, 1, 0)$, $y_1 = \text{good}$
-- $X_2 = (1, 0, 1)$, $y_2 = \text{bad}$
-- $X_3 = (1, 1, 1)$, $y_3 = \text{ugly}$
-- $X_4 = (1, 0, 0)$, $y_4 = \text{bad}$
-- $X_5 = (0, 0, 1)$, $y_5 = \text{good}$
+| input example | output label |
+|---------------|--------------|
+| $X_1 = (0, 1, 0)$ | $y_1 = \text{good}$ |
+| $X_2 = (1, 0, 1)$ | $y_2 = \text{bad}$ |
+| $X_3 = (1, 1, 1)$ | $y_3 = \text{ugly}$ |
+| $X_4 = (1, 0, 0)$ | $y_4 = \text{bad}$ |
+| $X_5 = (0, 0, 1)$ | $y_5 = \text{good}$ |
 
 Suppose we want to learn a linear classifier using multi-class perceptron algorithm and start from the following weights:
 
@@ -31,14 +31,47 @@ Suppose we want to learn a linear classifier using multi-class perceptron algori
 
 Do hand calculations to show how weights change after processing examples in the same order (i.e. one single pass over the 5 training examples)
 
+## Q1 Answer
+
+First training example $X_1 = (0, 1, 0)$  
+expected output = $y_1' = \text{argmax} (W \times (0, 1, 0)^T) = \text{good}$  
+$y_1' = y_1$ so we don't need to change the weights
+
+Second training example $X_2 = (1, 0, 1)$  
+expected output = $y_2' = \text{argmax} (W \times (1, 0, 1)^T) = \text{good}$  
+$y_2' \neq y_2$ so we need to update the weights for $w_{\text{bad}}$ and $w_{\text{ugly}}$  
+$w_{\text{bad}} += (1, 0, 1) = (1, 0 , 1)$ and $w_{\text{good}} -= (1, 0, 1) = (-1, 0, -1)$
+
+Third training example $X_3 = (1, 1, 1)$  
+Expected output $y_3' = \text{argmax} (W \times (1, 1, 1)^T) = \text{argmax}(-2, -2, 0) = \text{bad}$  
+$y_3' \neq y_3$ so we need to update the weights for $w_{\text{bad}}$ and $w_{\text{ugly}}$  
+$w_{\text{bad}} -= (1, 1, 1) = (0, -1, 0)$ and $w_{\text{ugly}} += (1, 1, 1) = (1, 1, 1)$
+
+Fourth training example $X_4 = (1, 0, 0)$
+Expected output $y_4' = \text{argmax} (W \times (1, 0, 0)^T) = \text{argmax}(-1, 0, 1) = \text{ugly}$  
+$y_4' \neq y_4$ so we need to update the weights for $w_{\text{bad}}$ and $w_{\text{ugly}}$  
+$w_{\text{bad}} += (1, 0, 0) = (1, -1, 0)$ and $w_{\text{ugly}} -= (1, 0, 0) = (0, 1, 1)$
+
+Fifth training example $X_5 = (0, 0, 1)$  
+$y_5' = \text{argmax} (W \times (0, 0, 1)^T) = \text{argmax}(-1, 0, 1) = \text{ugly}$  
+$y_5' = y_5$ so we don't need to change the weights for $w_{\text{good}}$ and $w_{\text{ugly}}$
+$w_{\text{good}} += (0, 0, 1) = (-1, 0, 0)$ and $w_{\text{ugly}} -= (0, 0, 1) = (0, 1, 0)$
+
+### Final Weights
+- $w_{\text{good}} = (-1, 0, 0)$
+- $w_{\text{bad}} = (1, -1, 0)$
+- $w_{\text{ugly}} = (0, 1, 0)$
+
 # Q2
 Suppose you are given the following binary classification training data, where each input example has three features and output label takes a value *good* or *bad*
 
-- $X_1 = (0, 1, 0)$, $y_1 = \text{good}$
-- $X_2 = (1, 0, 1)$, $y_2 = \text{bad}$
-- $X_3 = (1, 1, 1)$, $y_3 = \text{good}$
-- $X_4 = (1, 0, 0)$, $y_4 = \text{bad}$
-- $X_5 = (0, 0, 1)$, $y_5 = \text{good}$
+| input example | output label |
+|---------------|--------------|
+| $X_1 = (0, 1, 0)$ | $y_1 = \text{good}$ |
+| $X_2 = (1, 0, 1)$ | $y_2 = \text{bad}$ |
+| $X_3 = (1, 1, 1)$ | $y_3 = \text{good}$ |
+| $X_4 = (1, 0, 0)$ | $y_4 = \text{bad}$ |
+| $X_5 = (0, 0, 1)$ | $y_5 = \text{good}$ |
 
 Suppose we want to learn a classifier using kernelized perceptron algorithm. Start from the following dual weights:
 $$\alpha_1 = 0; \alpha_2 = 0; \alpha_3 = 0; \alpha_4 = 0; \alpha_5 = 0$$
@@ -49,6 +82,13 @@ b. Polynomial kernel with degree 3: $K(x, x') = (x \cdot x' + 1)^3$
 
 where $x \cdot x'$ is the dot product of two inputs $x$ and $x'$. See [Algorithm 30](http://ciml.info/dl/v0_99/ciml-v0_99-ch11.pdf). You can ignore the bias term $b$
 
+## Q2 Answer
+
+### Linear Kernel
+
+First training example $X_1 = (0, 1, 0)$
+
+
 # Q3
 Suppose $x = (x_1, x_2, \ldots, x_d)$ and $z = (z_1, z_2, \ldots, z_d)$ are any two points in a high dimensional space. Suppose you are given the following property, where the right hand side quantity represents the standard Euclidian distance.
 $$(\frac{1}{\sqrt{d}} \sum_{i=1}^d x_i - \frac{1}{\sqrt{d}} \sum_{i=1}^d z_i)^2 \leq \sum_{i=1}^d (x_i - z_i)^2$$
@@ -56,11 +96,15 @@ We know that the computation of nearest neighbors is very expensive in the high-
 space. Discuss how we can make use of the above property to make the nearest neighbors
 computation efficient?
 
+## Q3 Answer
+
 # Q4
 We know that we can convert any decision tree into a set of if-then rules,
 where there is one rule per leaf node. Suppose you are given a set of rules $R = \{r_1, r_2, \ldots, r_k\}$
 where $r_i$ corresponds to the $i^{th}$ rule. Is it possible to convert the rule set $R$ into an equivalent decision tree?
 Explain your construction or give a counter example.
+
+## Q4 Answer
 
 # Q5
 Read the following two papers and write a brief summary of the main points in at most 3 pages
@@ -69,3 +113,33 @@ Read the following two papers and write a brief summary of the main points in at
 pdf)
 - [The ML Test score: A Rubric for ML Production Systems](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/
 46555.pdf)
+
+\newpage
+
+## Q5 Answer
+### Hidden Technical Debt in Machine Learning Systems
+This article talks about how machine learning is immensely powerful for building complex prediction system quickly, but argues that those wins don't come for free.
+It illustrates several risk factors that must be accounted for in system design. 
+There's an included figure that shows that only a small fraction of real-world machine learning systems are made up of the actual machine learning code. The rest is the infrastructure needed to maintain it.
+
+These design factors are:  
+
+- boundary erosion
+- entanglement 
+- hidden feedback loops
+- undeclared consumers
+- data dependencies 
+- configuration issues
+- changes in the external world
+- system level anti-patterns
+
+**Entanglement** is the idea that everything is intertwined. The author talks about a concept called the CACE principle, which means "Changing Anything Changes Everything".
+This principle applies to any parameter that gets tweaked in a model.
+One possible way to mitigate the effects of entanglement is to isolate models and serve ensembles.
+
+Hidden feedback loops are more difficult to manage than direct feedback loops where two systems indirectly influence each other, which makes it hard to find problems. One example of this is if "two systems independetly determine facets of a web page."
+Improving one system can cause the behavior of the other to change, which causes other components to react to the change as the end user interacts with the site.
+
+
+
+### The ML Test score: A Rubric for ML Production Systems

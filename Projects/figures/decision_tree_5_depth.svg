@@ -1,0 +1,568 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2175pt" height="622pt" viewBox="0.00 0.00 2174.81 622.40">
+<g id="graph0" class="graph" transform="translate(-366.01259581215163,1122.157463545755) scale(2.63901582154579)" data-name="Tree">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-618.4 2170.81,-618.4 2170.81,4 -4,4" style=""/>
+<!-- 0 -->
+<g id="node1" class="node" pointer-events="visible" data-name="0">
+
+<polygon fill="none" stroke="black" points="765.17,-614.5 612.74,-614.5 612.74,-539.1 765.17,-539.1 765.17,-614.5" style=""/>
+<text text-anchor="middle" x="688.96" y="-597.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">SSLfinal_State &lt;= 0.5</text>
+<text text-anchor="middle" x="688.96" y="-581" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.494</text>
+<text text-anchor="middle" x="688.96" y="-564.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 8844</text>
+<text text-anchor="middle" x="688.96" y="-547.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [3942, 4902]</text>
+</g>
+<!-- 1 -->
+<g id="node2" class="node" pointer-events="visible" data-name="1">
+
+<polygon fill="none" stroke="black" points="645.82,-503.3 482.09,-503.3 482.09,-427.9 645.82,-427.9 645.82,-503.3" style=""/>
+<text text-anchor="middle" x="563.96" y="-486.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">URL_of_Anchor &lt;= -0.5</text>
+<text text-anchor="middle" x="563.96" y="-469.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.201</text>
+<text text-anchor="middle" x="563.96" y="-453" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 3815</text>
+<text text-anchor="middle" x="563.96" y="-436.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [3382, 433]</text>
+</g>
+<!-- 0&#45;&gt;1 -->
+<g id="edge1" class="edge" data-name="0-&gt;1">
+
+<path fill="none" stroke="black" d="M646.64,-538.83C636.35,-529.85 625.25,-520.15 614.63,-510.87" style=""/>
+<polygon fill="black" stroke="black" points="617.21,-508.47 607.37,-504.53 612.6,-513.74 617.21,-508.47" style=""/>
+<text text-anchor="middle" x="607.92" y="-524.28" font-family="Helvetica,sans-Serif" font-size="14.00" style="">True</text>
+</g>
+<!-- 14 -->
+<g id="node15" class="node" pointer-events="visible" data-name="14">
+
+<polygon fill="none" stroke="black" points="984.82,-503.3 821.09,-503.3 821.09,-427.9 984.82,-427.9 984.82,-503.3" style=""/>
+<text text-anchor="middle" x="902.96" y="-486.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">URL_of_Anchor &lt;= -0.5</text>
+<text text-anchor="middle" x="902.96" y="-469.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.198</text>
+<text text-anchor="middle" x="902.96" y="-453" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 5029</text>
+<text text-anchor="middle" x="902.96" y="-436.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [560, 4469]</text>
+</g>
+<!-- 0&#45;&gt;14 -->
+<g id="edge14" class="edge" data-name="0-&gt;14">
+
+<path fill="none" stroke="black" d="M761.71,-538.68C780.59,-529.04 801.06,-518.59 820.41,-508.72" style=""/>
+<polygon fill="black" stroke="black" points="821.74,-511.97 829.06,-504.31 818.56,-505.74 821.74,-511.97" style=""/>
+<text text-anchor="middle" x="822.7" y="-523.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">False</text>
+</g>
+<!-- 2 -->
+<g id="node3" class="node" pointer-events="visible" data-name="2">
+
+<polygon fill="none" stroke="black" points="470.87,-383.8 351.04,-383.8 351.04,-325 470.87,-325 470.87,-383.8" style=""/>
+<text text-anchor="middle" x="410.96" y="-367" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="410.96" y="-350.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 2434</text>
+<text text-anchor="middle" x="410.96" y="-333.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [2434, 0]</text>
+</g>
+<!-- 1&#45;&gt;2 -->
+<g id="edge2" class="edge" data-name="1-&gt;2">
+
+<path fill="none" stroke="black" d="M512.16,-427.63C495.33,-415.62 476.72,-402.34 460.1,-390.48" style=""/>
+<polygon fill="black" stroke="black" points="462.5,-387.89 452.32,-384.93 458.43,-393.58 462.5,-387.89" style=""/>
+</g>
+<!-- 3 -->
+<g id="node4" class="node" pointer-events="visible" data-name="3">
+
+<polygon fill="none" stroke="black" points="638.82,-392.1 489.09,-392.1 489.09,-316.7 638.82,-316.7 638.82,-392.1" style=""/>
+<text text-anchor="middle" x="563.96" y="-375.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Links_in_tags &lt;= -0.5</text>
+<text text-anchor="middle" x="563.96" y="-358.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.43</text>
+<text text-anchor="middle" x="563.96" y="-341.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 1381</text>
+<text text-anchor="middle" x="563.96" y="-325" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [948, 433]</text>
+</g>
+<!-- 1&#45;&gt;3 -->
+<g id="edge3" class="edge" data-name="1-&gt;3">
+
+<path fill="none" stroke="black" d="M563.96,-427.63C563.96,-419.98 563.96,-411.81 563.96,-403.83" style=""/>
+<polygon fill="black" stroke="black" points="567.46,-403.85 563.96,-393.85 560.46,-403.85 567.46,-403.85" style=""/>
+</g>
+<!-- 4 -->
+<g id="node5" class="node" pointer-events="visible" data-name="4">
+
+<polygon fill="none" stroke="black" points="382.14,-280.9 243.78,-280.9 243.78,-205.5 382.14,-205.5 382.14,-280.9" style=""/>
+<text text-anchor="middle" x="312.96" y="-264.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Prefix_Suffix &lt;= 0.0</text>
+<text text-anchor="middle" x="312.96" y="-247.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.236</text>
+<text text-anchor="middle" x="312.96" y="-230.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 708</text>
+<text text-anchor="middle" x="312.96" y="-213.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [611, 97]</text>
+</g>
+<!-- 3&#45;&gt;4 -->
+<g id="edge4" class="edge" data-name="3-&gt;4">
+
+<path fill="none" stroke="black" d="M488.85,-320.67C485.85,-319.36 482.87,-318.07 479.96,-316.8 451.55,-304.44 420.43,-290.9 392.83,-278.91" style=""/>
+<polygon fill="black" stroke="black" points="394.39,-275.77 383.82,-274.99 391.6,-282.19 394.39,-275.77" style=""/>
+</g>
+<!-- 9 -->
+<g id="node10" class="node" pointer-events="visible" data-name="9">
+
+<polygon fill="none" stroke="black" points="633.14,-280.9 494.78,-280.9 494.78,-205.5 633.14,-205.5 633.14,-280.9" style=""/>
+<text text-anchor="middle" x="563.96" y="-264.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Prefix_Suffix &lt;= 0.0</text>
+<text text-anchor="middle" x="563.96" y="-247.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.5</text>
+<text text-anchor="middle" x="563.96" y="-230.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 673</text>
+<text text-anchor="middle" x="563.96" y="-213.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [337, 336]</text>
+</g>
+<!-- 3&#45;&gt;9 -->
+<g id="edge9" class="edge" data-name="3-&gt;9">
+
+<path fill="none" stroke="black" d="M563.96,-316.43C563.96,-308.78 563.96,-300.61 563.96,-292.63" style=""/>
+<polygon fill="black" stroke="black" points="567.46,-292.65 563.96,-282.65 560.46,-292.65 567.46,-292.65" style=""/>
+</g>
+<!-- 5 -->
+<g id="node6" class="node" pointer-events="visible" data-name="5">
+
+<polygon fill="none" stroke="black" points="242.75,-169.7 115.17,-169.7 115.17,-94.3 242.75,-94.3 242.75,-169.7" style=""/>
+<text text-anchor="middle" x="178.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">web_traffic &lt;= 0.5</text>
+<text text-anchor="middle" x="178.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.207</text>
+<text text-anchor="middle" x="178.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 692</text>
+<text text-anchor="middle" x="178.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [611, 81]</text>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g id="edge5" class="edge" data-name="4-&gt;5">
+
+<path fill="none" stroke="black" d="M267.59,-205.23C256.46,-196.16 244.43,-186.36 232.94,-176.99" style=""/>
+<polygon fill="black" stroke="black" points="235.41,-174.49 225.45,-170.89 230.99,-179.92 235.41,-174.49" style=""/>
+</g>
+<!-- 8 -->
+<g id="node9" class="node" pointer-events="visible" data-name="8">
+
+<polygon fill="none" stroke="black" points="365.3,-161.4 260.62,-161.4 260.62,-102.6 365.3,-102.6 365.3,-161.4" style=""/>
+<text text-anchor="middle" x="312.96" y="-144.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="312.96" y="-127.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 16</text>
+<text text-anchor="middle" x="312.96" y="-111" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [0, 16]</text>
+</g>
+<!-- 4&#45;&gt;8 -->
+<g id="edge8" class="edge" data-name="4-&gt;8">
+
+<path fill="none" stroke="black" d="M312.96,-205.23C312.96,-194.89 312.96,-183.61 312.96,-173.09" style=""/>
+<polygon fill="black" stroke="black" points="316.46,-173.16 312.96,-163.16 309.46,-173.16 316.46,-173.16" style=""/>
+</g>
+<!-- 6 -->
+<g id="node7" class="node" pointer-events="visible" data-name="6">
+
+<polygon fill="none" stroke="black" points="119.87,-58.6 0.04,-58.6 0.04,0.2 119.87,0.2 119.87,-58.6" style=""/>
+<text text-anchor="middle" x="59.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.128</text>
+<text text-anchor="middle" x="59.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 364</text>
+<text text-anchor="middle" x="59.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [339, 25]</text>
+</g>
+<!-- 5&#45;&gt;6 -->
+<g id="edge6" class="edge" data-name="5-&gt;6">
+
+<path fill="none" stroke="black" d="M135.32,-94.04C124.65,-85 113.24,-75.33 102.61,-66.33" style=""/>
+<polygon fill="black" stroke="black" points="104.94,-63.72 95.05,-59.93 100.42,-69.06 104.94,-63.72" style=""/>
+</g>
+<!-- 7 -->
+<g id="node8" class="node" pointer-events="visible" data-name="7">
+
+<polygon fill="none" stroke="black" points="257.87,-58.6 138.04,-58.6 138.04,0.2 257.87,0.2 257.87,-58.6" style=""/>
+<text text-anchor="middle" x="197.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.283</text>
+<text text-anchor="middle" x="197.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 328</text>
+<text text-anchor="middle" x="197.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [272, 56]</text>
+</g>
+<!-- 5&#45;&gt;7 -->
+<g id="edge7" class="edge" data-name="5-&gt;7">
+
+<path fill="none" stroke="black" d="M185.92,-94.04C187.39,-86.26 188.94,-78.02 190.43,-70.14" style=""/>
+<polygon fill="black" stroke="black" points="193.84,-70.91 192.26,-60.44 186.97,-69.61 193.84,-70.91" style=""/>
+</g>
+<!-- 10 -->
+<g id="node11" class="node" pointer-events="visible" data-name="10">
+
+<polygon fill="none" stroke="black" points="530.49,-169.7 383.43,-169.7 383.43,-94.3 530.49,-94.3 530.49,-169.7" style=""/>
+<text text-anchor="middle" x="456.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Request_URL &lt;= 0.0</text>
+<text text-anchor="middle" x="456.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.494</text>
+<text text-anchor="middle" x="456.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 607</text>
+<text text-anchor="middle" x="456.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [337, 270]</text>
+</g>
+<!-- 9&#45;&gt;10 -->
+<g id="edge10" class="edge" data-name="9-&gt;10">
+
+<path fill="none" stroke="black" d="M527.73,-205.23C519.19,-196.51 509.99,-187.13 501.14,-178.09" style=""/>
+<polygon fill="black" stroke="black" points="503.7,-175.71 494.2,-171.01 498.7,-180.61 503.7,-175.71" style=""/>
+</g>
+<!-- 13 -->
+<g id="node14" class="node" pointer-events="visible" data-name="13">
+
+<polygon fill="none" stroke="black" points="653.3,-161.4 548.62,-161.4 548.62,-102.6 653.3,-102.6 653.3,-161.4" style=""/>
+<text text-anchor="middle" x="600.96" y="-144.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="600.96" y="-127.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 66</text>
+<text text-anchor="middle" x="600.96" y="-111" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [0, 66]</text>
+</g>
+<!-- 9&#45;&gt;13 -->
+<g id="edge13" class="edge" data-name="9-&gt;13">
+
+<path fill="none" stroke="black" d="M576.48,-205.23C580.06,-194.67 583.97,-183.12 587.6,-172.42" style=""/>
+<polygon fill="black" stroke="black" points="590.87,-173.67 590.76,-163.08 584.24,-171.43 590.87,-173.67" style=""/>
+</g>
+<!-- 11 -->
+<g id="node12" class="node" pointer-events="visible" data-name="11">
+
+<polygon fill="none" stroke="black" points="432.87,-58.6 313.04,-58.6 313.04,0.2 432.87,0.2 432.87,-58.6" style=""/>
+<text text-anchor="middle" x="372.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.373</text>
+<text text-anchor="middle" x="372.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 226</text>
+<text text-anchor="middle" x="372.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [170, 56]</text>
+</g>
+<!-- 10&#45;&gt;11 -->
+<g id="edge11" class="edge" data-name="10-&gt;11">
+
+<path fill="none" stroke="black" d="M426.16,-94.04C419,-85.45 411.37,-76.3 404.19,-67.68" style=""/>
+<polygon fill="black" stroke="black" points="406.97,-65.55 397.88,-60.11 401.6,-70.03 406.97,-65.55" style=""/>
+</g>
+<!-- 12 -->
+<g id="node13" class="node" pointer-events="visible" data-name="12">
+
+<polygon fill="none" stroke="black" points="578.66,-58.6 451.26,-58.6 451.26,0.2 578.66,0.2 578.66,-58.6" style=""/>
+<text text-anchor="middle" x="514.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.492</text>
+<text text-anchor="middle" x="514.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 381</text>
+<text text-anchor="middle" x="514.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [167, 214]</text>
+</g>
+<!-- 10&#45;&gt;12 -->
+<g id="edge12" class="edge" data-name="10-&gt;12">
+
+<path fill="none" stroke="black" d="M478.22,-94.04C482.96,-85.81 487.99,-77.06 492.76,-68.77" style=""/>
+<polygon fill="black" stroke="black" points="495.71,-70.67 497.66,-60.26 489.64,-67.18 495.71,-70.67" style=""/>
+</g>
+<!-- 15 -->
+<g id="node16" class="node" pointer-events="visible" data-name="15">
+
+<polygon fill="none" stroke="black" points="972.14,-392.1 833.78,-392.1 833.78,-316.7 972.14,-316.7 972.14,-392.1" style=""/>
+<text text-anchor="middle" x="902.96" y="-375.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Prefix_Suffix &lt;= 0.0</text>
+<text text-anchor="middle" x="902.96" y="-358.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.235</text>
+<text text-anchor="middle" x="902.96" y="-341.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 206</text>
+<text text-anchor="middle" x="902.96" y="-325" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [178, 28]</text>
+</g>
+<!-- 14&#45;&gt;15 -->
+<g id="edge15" class="edge" data-name="14-&gt;15">
+
+<path fill="none" stroke="black" d="M902.96,-427.63C902.96,-419.98 902.96,-411.81 902.96,-403.83" style=""/>
+<polygon fill="black" stroke="black" points="906.46,-403.85 902.96,-393.85 899.46,-403.85 906.46,-403.85" style=""/>
+</g>
+<!-- 24 -->
+<g id="node25" class="node" pointer-events="visible" data-name="24">
+
+<polygon fill="none" stroke="black" points="1419.94,-392.1 1283.97,-392.1 1283.97,-316.7 1419.94,-316.7 1419.94,-392.1" style=""/>
+<text text-anchor="middle" x="1351.96" y="-375.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">web_traffic &lt;= 0.5</text>
+<text text-anchor="middle" x="1351.96" y="-358.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.146</text>
+<text text-anchor="middle" x="1351.96" y="-341.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 4823</text>
+<text text-anchor="middle" x="1351.96" y="-325" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [382, 4441]</text>
+</g>
+<!-- 14&#45;&gt;24 -->
+<g id="edge24" class="edge" data-name="14-&gt;24">
+
+<path fill="none" stroke="black" d="M985.31,-444.57C1067.16,-424.67 1191.83,-394.34 1272.61,-374.7" style=""/>
+<polygon fill="black" stroke="black" points="1273.35,-378.12 1282.24,-372.36 1271.69,-371.32 1273.35,-378.12" style=""/>
+</g>
+<!-- 16 -->
+<g id="node17" class="node" pointer-events="visible" data-name="16">
+
+<polygon fill="none" stroke="black" points="921.11,-280.9 708.8,-280.9 708.8,-205.5 921.11,-205.5 921.11,-280.9" style=""/>
+<text text-anchor="middle" x="814.96" y="-264.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Links_pointing_to_page &lt;= -0.5</text>
+<text text-anchor="middle" x="814.96" y="-247.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.127</text>
+<text text-anchor="middle" x="814.96" y="-230.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 191</text>
+<text text-anchor="middle" x="814.96" y="-213.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [178, 13]</text>
+</g>
+<!-- 15&#45;&gt;16 -->
+<g id="edge16" class="edge" data-name="15-&gt;16">
+
+<path fill="none" stroke="black" d="M873.16,-316.43C866.28,-307.89 858.88,-298.71 851.74,-289.85" style=""/>
+<polygon fill="black" stroke="black" points="854.67,-287.9 845.67,-282.31 849.22,-292.29 854.67,-287.9" style=""/>
+</g>
+<!-- 23 -->
+<g id="node24" class="node" pointer-events="visible" data-name="23">
+
+<polygon fill="none" stroke="black" points="1043.3,-272.6 938.62,-272.6 938.62,-213.8 1043.3,-213.8 1043.3,-272.6" style=""/>
+<text text-anchor="middle" x="990.96" y="-255.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="990.96" y="-239" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 15</text>
+<text text-anchor="middle" x="990.96" y="-222.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [0, 15]</text>
+</g>
+<!-- 15&#45;&gt;23 -->
+<g id="edge23" class="edge" data-name="15-&gt;23">
+
+<path fill="none" stroke="black" d="M932.75,-316.43C941.8,-305.2 951.75,-292.86 960.82,-281.6" style=""/>
+<polygon fill="black" stroke="black" points="963.37,-284.01 966.92,-274.02 957.92,-279.62 963.37,-284.01" style=""/>
+</g>
+<!-- 17 -->
+<g id="node18" class="node" pointer-events="visible" data-name="17">
+
+<polygon fill="none" stroke="black" points="886.71,-169.7 671.2,-169.7 671.2,-94.3 886.71,-94.3 886.71,-169.7" style=""/>
+<text text-anchor="middle" x="778.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">double_slash_redirecting &lt;= 0.0</text>
+<text text-anchor="middle" x="778.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.346</text>
+<text text-anchor="middle" x="778.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 9</text>
+<text text-anchor="middle" x="778.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [2, 7]</text>
+</g>
+<!-- 16&#45;&gt;17 -->
+<g id="edge17" class="edge" data-name="16-&gt;17">
+
+<path fill="none" stroke="black" d="M802.77,-205.23C800.16,-197.31 797.37,-188.84 794.65,-180.59" style=""/>
+<polygon fill="black" stroke="black" points="798.06,-179.77 791.61,-171.37 791.41,-181.96 798.06,-179.77" style=""/>
+</g>
+<!-- 20 -->
+<g id="node21" class="node" pointer-events="visible" data-name="20">
+
+<polygon fill="none" stroke="black" points="1017.08,-169.7 904.83,-169.7 904.83,-94.3 1017.08,-94.3 1017.08,-169.7" style=""/>
+<text text-anchor="middle" x="960.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">port &lt;= 0.0</text>
+<text text-anchor="middle" x="960.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.064</text>
+<text text-anchor="middle" x="960.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 182</text>
+<text text-anchor="middle" x="960.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [176, 6]</text>
+</g>
+<!-- 16&#45;&gt;20 -->
+<g id="edge20" class="edge" data-name="16-&gt;20">
+
+<path fill="none" stroke="black" d="M864.39,-205.23C876.63,-196.07 889.87,-186.17 902.51,-176.72" style=""/>
+<polygon fill="black" stroke="black" points="904.45,-179.63 910.37,-170.84 900.26,-174.03 904.45,-179.63" style=""/>
+</g>
+<!-- 18 -->
+<g id="node19" class="node" pointer-events="visible" data-name="18">
+
+<polygon fill="none" stroke="black" points="712.01,-58.6 615.9,-58.6 615.9,0.2 712.01,0.2 712.01,-58.6" style=""/>
+<text text-anchor="middle" x="663.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="663.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 2</text>
+<text text-anchor="middle" x="663.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [2, 0]</text>
+</g>
+<!-- 17&#45;&gt;18 -->
+<g id="edge18" class="edge" data-name="17-&gt;18">
+
+<path fill="none" stroke="black" d="M736.79,-94.04C726.47,-85 715.44,-75.33 705.17,-66.33" style=""/>
+<polygon fill="black" stroke="black" points="707.72,-63.91 697.89,-59.95 703.11,-69.17 707.72,-63.91" style=""/>
+</g>
+<!-- 19 -->
+<g id="node20" class="node" pointer-events="visible" data-name="19">
+
+<polygon fill="none" stroke="black" points="827.01,-58.6 730.9,-58.6 730.9,0.2 827.01,0.2 827.01,-58.6" style=""/>
+<text text-anchor="middle" x="778.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="778.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 7</text>
+<text text-anchor="middle" x="778.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [0, 7]</text>
+</g>
+<!-- 17&#45;&gt;19 -->
+<g id="edge19" class="edge" data-name="17-&gt;19">
+
+<path fill="none" stroke="black" d="M778.96,-94.04C778.96,-86.35 778.96,-78.22 778.96,-70.42" style=""/>
+<polygon fill="black" stroke="black" points="782.46,-70.46 778.96,-60.46 775.46,-70.46 782.46,-70.46" style=""/>
+</g>
+<!-- 21 -->
+<g id="node22" class="node" pointer-events="visible" data-name="21">
+
+<polygon fill="none" stroke="black" points="949.3,-58.6 844.62,-58.6 844.62,0.2 949.3,0.2 949.3,-58.6" style=""/>
+<text text-anchor="middle" x="896.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.386</text>
+<text text-anchor="middle" x="896.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 23</text>
+<text text-anchor="middle" x="896.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [17, 6]</text>
+</g>
+<!-- 20&#45;&gt;21 -->
+<g id="edge21" class="edge" data-name="20-&gt;21">
+
+<path fill="none" stroke="black" d="M937.49,-94.04C932.21,-85.72 926.59,-76.87 921.27,-68.5" style=""/>
+<polygon fill="black" stroke="black" points="924.34,-66.79 916.02,-60.23 918.43,-70.54 924.34,-66.79" style=""/>
+</g>
+<!-- 22 -->
+<g id="node23" class="node" pointer-events="visible" data-name="22">
+
+<polygon fill="none" stroke="black" points="1079.08,-58.6 966.83,-58.6 966.83,0.2 1079.08,0.2 1079.08,-58.6" style=""/>
+<text text-anchor="middle" x="1022.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="1022.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 159</text>
+<text text-anchor="middle" x="1022.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [159, 0]</text>
+</g>
+<!-- 20&#45;&gt;22 -->
+<g id="edge22" class="edge" data-name="20-&gt;22">
+
+<path fill="none" stroke="black" d="M983.69,-94.04C988.81,-85.72 994.25,-76.87 999.4,-68.5" style=""/>
+<polygon fill="black" stroke="black" points="1002.22,-70.59 1004.48,-60.24 996.26,-66.92 1002.22,-70.59" style=""/>
+</g>
+<!-- 25 -->
+<g id="node26" class="node" pointer-events="visible" data-name="25">
+
+<polygon fill="none" stroke="black" points="1419.94,-280.9 1283.97,-280.9 1283.97,-205.5 1419.94,-205.5 1419.94,-280.9" style=""/>
+<text text-anchor="middle" x="1351.96" y="-264.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">web_traffic &lt;= -0.5</text>
+<text text-anchor="middle" x="1351.96" y="-247.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.276</text>
+<text text-anchor="middle" x="1351.96" y="-230.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 1593</text>
+<text text-anchor="middle" x="1351.96" y="-213.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [263, 1330]</text>
+</g>
+<!-- 24&#45;&gt;25 -->
+<g id="edge25" class="edge" data-name="24-&gt;25">
+
+<path fill="none" stroke="black" d="M1351.96,-316.43C1351.96,-308.78 1351.96,-300.61 1351.96,-292.63" style=""/>
+<polygon fill="black" stroke="black" points="1355.46,-292.65 1351.96,-282.65 1348.46,-292.65 1355.46,-292.65" style=""/>
+</g>
+<!-- 32 -->
+<g id="node33" class="node" pointer-events="visible" data-name="32">
+
+<polygon fill="none" stroke="black" points="1799.82,-280.9 1650.09,-280.9 1650.09,-205.5 1799.82,-205.5 1799.82,-280.9" style=""/>
+<text text-anchor="middle" x="1724.96" y="-264.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">Links_in_tags &lt;= -0.5</text>
+<text text-anchor="middle" x="1724.96" y="-247.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.071</text>
+<text text-anchor="middle" x="1724.96" y="-230.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 3230</text>
+<text text-anchor="middle" x="1724.96" y="-213.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [119, 3111]</text>
+</g>
+<!-- 24&#45;&gt;32 -->
+<g id="edge32" class="edge" data-name="24-&gt;32">
+
+<path fill="none" stroke="black" d="M1420.37,-333.37C1481.83,-315.38 1572.36,-288.87 1638.75,-269.44" style=""/>
+<polygon fill="black" stroke="black" points="1639.54,-272.85 1648.15,-266.69 1637.57,-266.14 1639.54,-272.85" style=""/>
+</g>
+<!-- 26 -->
+<g id="node27" class="node" pointer-events="visible" data-name="26">
+
+<polygon fill="none" stroke="black" points="1350.53,-169.7 1161.38,-169.7 1161.38,-94.3 1350.53,-94.3 1350.53,-169.7" style=""/>
+<text text-anchor="middle" x="1255.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">having_Sub_Domain &lt;= 0.5</text>
+<text text-anchor="middle" x="1255.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.029</text>
+<text text-anchor="middle" x="1255.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 751</text>
+<text text-anchor="middle" x="1255.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [11, 740]</text>
+</g>
+<!-- 25&#45;&gt;26 -->
+<g id="edge26" class="edge" data-name="25-&gt;26">
+
+<path fill="none" stroke="black" d="M1319.46,-205.23C1311.87,-196.6 1303.71,-187.32 1295.84,-178.37" style=""/>
+<polygon fill="black" stroke="black" points="1298.65,-176.27 1289.42,-171.07 1293.4,-180.89 1298.65,-176.27" style=""/>
+</g>
+<!-- 29 -->
+<g id="node30" class="node" pointer-events="visible" data-name="29">
+
+<polygon fill="none" stroke="black" points="1527.66,-169.7 1368.25,-169.7 1368.25,-94.3 1527.66,-94.3 1527.66,-169.7" style=""/>
+<text text-anchor="middle" x="1447.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">URL_of_Anchor &lt;= 0.5</text>
+<text text-anchor="middle" x="1447.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.419</text>
+<text text-anchor="middle" x="1447.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 842</text>
+<text text-anchor="middle" x="1447.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [252, 590]</text>
+</g>
+<!-- 25&#45;&gt;29 -->
+<g id="edge29" class="edge" data-name="25-&gt;29">
+
+<path fill="none" stroke="black" d="M1384.46,-205.23C1392.04,-196.6 1400.21,-187.32 1408.07,-178.37" style=""/>
+<polygon fill="black" stroke="black" points="1410.52,-180.89 1414.49,-171.07 1405.26,-176.27 1410.52,-180.89" style=""/>
+</g>
+<!-- 27 -->
+<g id="node28" class="node" pointer-events="visible" data-name="27">
+
+<polygon fill="none" stroke="black" points="1209.08,-58.6 1096.83,-58.6 1096.83,0.2 1209.08,0.2 1209.08,-58.6" style=""/>
+<text text-anchor="middle" x="1152.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.084</text>
+<text text-anchor="middle" x="1152.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 206</text>
+<text text-anchor="middle" x="1152.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [9, 197]</text>
+</g>
+<!-- 26&#45;&gt;27 -->
+<g id="edge27" class="edge" data-name="26-&gt;27">
+
+<path fill="none" stroke="black" d="M1218.19,-94.04C1209.13,-85.18 1199.47,-75.72 1190.42,-66.87" style=""/>
+<polygon fill="black" stroke="black" points="1193.01,-64.5 1183.41,-60.01 1188.11,-69.5 1193.01,-64.5" style=""/>
+</g>
+<!-- 28 -->
+<g id="node29" class="node" pointer-events="visible" data-name="28">
+
+<polygon fill="none" stroke="black" points="1339.08,-58.6 1226.83,-58.6 1226.83,0.2 1339.08,0.2 1339.08,-58.6" style=""/>
+<text text-anchor="middle" x="1282.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.007</text>
+<text text-anchor="middle" x="1282.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 545</text>
+<text text-anchor="middle" x="1282.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [2, 543]</text>
+</g>
+<!-- 26&#45;&gt;28 -->
+<g id="edge28" class="edge" data-name="26-&gt;28">
+
+<path fill="none" stroke="black" d="M1265.86,-94.04C1267.96,-86.17 1270.2,-77.83 1272.33,-69.87" style=""/>
+<polygon fill="black" stroke="black" points="1275.66,-70.98 1274.86,-60.41 1268.9,-69.16 1275.66,-70.98" style=""/>
+</g>
+<!-- 30 -->
+<g id="node31" class="node" pointer-events="visible" data-name="30">
+
+<polygon fill="none" stroke="black" points="1484.66,-58.6 1357.26,-58.6 1357.26,0.2 1484.66,0.2 1484.66,-58.6" style=""/>
+<text text-anchor="middle" x="1420.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.47</text>
+<text text-anchor="middle" x="1420.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 667</text>
+<text text-anchor="middle" x="1420.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [252, 415]</text>
+</g>
+<!-- 29&#45;&gt;30 -->
+<g id="edge30" class="edge" data-name="29-&gt;30">
+
+<path fill="none" stroke="black" d="M1438.06,-94.04C1435.95,-86.17 1433.72,-77.83 1431.58,-69.87" style=""/>
+<polygon fill="black" stroke="black" points="1435.02,-69.16 1429.05,-60.41 1428.26,-70.98 1435.02,-69.16" style=""/>
+</g>
+<!-- 31 -->
+<g id="node32" class="node" pointer-events="visible" data-name="31">
+
+<polygon fill="none" stroke="black" points="1615.08,-58.6 1502.83,-58.6 1502.83,0.2 1615.08,0.2 1615.08,-58.6" style=""/>
+<text text-anchor="middle" x="1558.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.0</text>
+<text text-anchor="middle" x="1558.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 175</text>
+<text text-anchor="middle" x="1558.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [0, 175]</text>
+</g>
+<!-- 29&#45;&gt;31 -->
+<g id="edge31" class="edge" data-name="29-&gt;31">
+
+<path fill="none" stroke="black" d="M1488.66,-94.04C1498.52,-85.09 1509.05,-75.52 1518.88,-66.6" style=""/>
+<polygon fill="black" stroke="black" points="1521.13,-69.28 1526.18,-59.97 1516.42,-64.1 1521.13,-69.28" style=""/>
+</g>
+<!-- 33 -->
+<g id="node34" class="node" pointer-events="visible" data-name="33">
+
+<polygon fill="none" stroke="black" points="1819.53,-169.7 1630.38,-169.7 1630.38,-94.3 1819.53,-94.3 1819.53,-169.7" style=""/>
+<text text-anchor="middle" x="1724.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">having_Sub_Domain &lt;= 0.5</text>
+<text text-anchor="middle" x="1724.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.184</text>
+<text text-anchor="middle" x="1724.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 839</text>
+<text text-anchor="middle" x="1724.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [86, 753]</text>
+</g>
+<!-- 32&#45;&gt;33 -->
+<g id="edge33" class="edge" data-name="32-&gt;33">
+
+<path fill="none" stroke="black" d="M1724.96,-205.23C1724.96,-197.58 1724.96,-189.41 1724.96,-181.43" style=""/>
+<polygon fill="black" stroke="black" points="1728.46,-181.45 1724.96,-171.45 1721.46,-181.45 1728.46,-181.45" style=""/>
+</g>
+<!-- 36 -->
+<g id="node37" class="node" pointer-events="visible" data-name="36">
+
+<polygon fill="none" stroke="black" points="2051.46,-169.7 1870.45,-169.7 1870.45,-94.3 2051.46,-94.3 2051.46,-169.7" style=""/>
+<text text-anchor="middle" x="1960.96" y="-153" font-family="Helvetica,sans-Serif" font-size="14.00" style="">having_IP_Address &lt;= 0.0</text>
+<text text-anchor="middle" x="1960.96" y="-136.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.027</text>
+<text text-anchor="middle" x="1960.96" y="-119.4" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 2391</text>
+<text text-anchor="middle" x="1960.96" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [33, 2358]</text>
+</g>
+<!-- 32&#45;&gt;36 -->
+<g id="edge36" class="edge" data-name="32-&gt;36">
+
+<path fill="none" stroke="black" d="M1800.28,-207.35C1822.6,-197.02 1847.29,-185.6 1870.47,-174.87" style=""/>
+<polygon fill="black" stroke="black" points="1871.67,-178.17 1879.27,-170.8 1868.73,-171.82 1871.67,-178.17" style=""/>
+</g>
+<!-- 34 -->
+<g id="node35" class="node" pointer-events="visible" data-name="34">
+
+<polygon fill="none" stroke="black" points="1752.87,-58.6 1633.04,-58.6 1633.04,0.2 1752.87,0.2 1752.87,-58.6" style=""/>
+<text text-anchor="middle" x="1692.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.291</text>
+<text text-anchor="middle" x="1692.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 453</text>
+<text text-anchor="middle" x="1692.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [80, 373]</text>
+</g>
+<!-- 33&#45;&gt;34 -->
+<g id="edge34" class="edge" data-name="33-&gt;34">
+
+<path fill="none" stroke="black" d="M1713.22,-94.04C1710.73,-86.17 1708.08,-77.83 1705.55,-69.87" style=""/>
+<polygon fill="black" stroke="black" points="1708.9,-68.86 1702.54,-60.39 1702.23,-70.98 1708.9,-68.86" style=""/>
+</g>
+<!-- 35 -->
+<g id="node36" class="node" pointer-events="visible" data-name="35">
+
+<polygon fill="none" stroke="black" points="1883.08,-58.6 1770.83,-58.6 1770.83,0.2 1883.08,0.2 1883.08,-58.6" style=""/>
+<text text-anchor="middle" x="1826.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.031</text>
+<text text-anchor="middle" x="1826.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 386</text>
+<text text-anchor="middle" x="1826.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [6, 380]</text>
+</g>
+<!-- 33&#45;&gt;35 -->
+<g id="edge35" class="edge" data-name="33-&gt;35">
+
+<path fill="none" stroke="black" d="M1762.36,-94.04C1771.33,-85.18 1780.9,-75.72 1789.85,-66.87" style=""/>
+<polygon fill="black" stroke="black" points="1792.14,-69.53 1796.79,-60.01 1787.22,-64.55 1792.14,-69.53" style=""/>
+</g>
+<!-- 37 -->
+<g id="node38" class="node" pointer-events="visible" data-name="37">
+
+<polygon fill="none" stroke="black" points="2020.87,-58.6 1901.04,-58.6 1901.04,0.2 2020.87,0.2 2020.87,-58.6" style=""/>
+<text text-anchor="middle" x="1960.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.064</text>
+<text text-anchor="middle" x="1960.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 638</text>
+<text text-anchor="middle" x="1960.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [21, 617]</text>
+</g>
+<!-- 36&#45;&gt;37 -->
+<g id="edge37" class="edge" data-name="36-&gt;37">
+
+<path fill="none" stroke="black" d="M1960.96,-94.04C1960.96,-86.35 1960.96,-78.22 1960.96,-70.42" style=""/>
+<polygon fill="black" stroke="black" points="1964.46,-70.46 1960.96,-60.46 1957.46,-70.46 1964.46,-70.46" style=""/>
+</g>
+<!-- 38 -->
+<g id="node39" class="node" pointer-events="visible" data-name="38">
+
+<polygon fill="none" stroke="black" points="2166.66,-58.6 2039.26,-58.6 2039.26,0.2 2166.66,0.2 2166.66,-58.6" style=""/>
+<text text-anchor="middle" x="2102.96" y="-41.8" font-family="Helvetica,sans-Serif" font-size="14.00" style="">gini = 0.014</text>
+<text text-anchor="middle" x="2102.96" y="-25" font-family="Helvetica,sans-Serif" font-size="14.00" style="">samples = 1753</text>
+<text text-anchor="middle" x="2102.96" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00" style="">value = [12, 1741]</text>
+</g>
+<!-- 36&#45;&gt;38 -->
+<g id="edge38" class="edge" data-name="36-&gt;38">
+
+<path fill="none" stroke="black" d="M2013.03,-94.04C2026.15,-84.72 2040.2,-74.75 2053.2,-65.52" style=""/>
+<polygon fill="black" stroke="black" points="2055.1,-68.47 2061.22,-59.82 2051.04,-62.76 2055.1,-68.47" style=""/>
+</g>
+</g>
+</svg>

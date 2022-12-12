@@ -1,0 +1,43 @@
+---
+title: "Detecting Phishing websites based on their URL attributes"
+author: "Zach Fechko"
+date: "December 12, 2022"
+format: 
+    pdf:
+        number-sections: true
+    html: 
+        number-sections: true
+        figure-caption: true
+
+---
+
+# Introduction
+Phishing is one of the oldest yet one of the most prevalent forms of online identity theft and fraud. And the fact that it still works to this day makes phishing is a very lucrative business for cyber criminals, and is estimated to cost businesses and individuals billions of dollars every year. According to purplesec's Cyber Security Trends report, more than 50% of IT professionals state that phishing attacks represent a top security concern. This is because phishing attacks don't go after servers or networks which professionals can easily defend, but instead go after the weakest link in the chain, the user who doesn't know any better.
+
+
+The way a phishing scam works is a cyber criminal will send an email to a user that appears to be from a legitimate source, such as their bank, PayPal, Amazon, etc. and express some form of urgency in order to get the victim to act on impulse and not think rationally about the email, such as their PayPal account being restricted, or an unauthorized purchase on their Amazon account. The email will contain a link to a website, typically a login page, that will look identical to the legitimate website that they are impersonating. Once the user enters their credentials on the fake website, the cyber criminal will have access to their credentials and can access the victim's accounts and even personal details.
+
+
+![How Phishing Works](images/phishing_diagram.png)
+
+
+The easiest way to tell if a website is "phishy" or not is to look at the URL of the page, oftentimes the url will be somewhat similar to the original, or not close at all in hopes that the victim doesn't even look.
+
+![Fake Paypal Login](images/Phish_website_example.png)
+
+Notice how in the above example, the URL "paypal--accounts.com" is similar to, but not exactly the same as the original login page "paypal.com". This is a common tactic used by cyber criminals to trick users into thinking that the website is legitimate.
+
+# Data Mining Task
+
+
+
+# Technical Approach
+
+
+
+# Results
+
+## Resources
+https://www.cloudflare.com/learning/access-management/phishing-attack/
+
+https://www.cybertalk.org/2022/03/30/top-15-phishing-attack-statistics-and-they-might-scare-you/
