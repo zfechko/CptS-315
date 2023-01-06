@@ -1,0 +1,5 @@
+ML Model,Training Accuracy,Test Accuracy
+Decision Tree,81.21,81.8
+Random Forest,81.9,82.35
+Logistic Regression,79.81,80.95
+SVM,79.98,81.15

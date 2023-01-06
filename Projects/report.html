@@ -76,12 +76,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>Phishing is one of the oldest yet one of the most prevalent forms of online identity theft and fraud. And the fact that it still works to this day makes phishing is a very lucrative business for cyber criminals, and is estimated to cost businesses and individuals billions of dollars every year. According to purplesec’s Cyber Security Trends report, more than 50% of IT professionals state that phishing attacks represent a top security concern. This is because phishing attacks don’t go after servers or networks which are easy to defend, but instead go after the weakest link in the chain, the user who doesn’t know any better.</p>
+<p>Phishing is one of the oldest yet one of the most prevalent forms of online identity theft and fraud. And the fact that it still works to this day makes phishing is a very lucrative business for cyber criminals, and is estimated to cost businesses and individuals billions of dollars every year. According to purplesec’s Cyber Security Trends report, more than 50% of IT professionals state that phishing attacks represent a top security concern. This is because phishing attacks don’t go after servers or networks which professionals can easily defend, but instead go after the weakest link in the chain, the user who doesn’t know any better.</p>
 <p>The way a phishing scam works is a cyber criminal will send an email to a user that appears to be from a legitimate source, such as their bank, PayPal, Amazon, etc. and express some form of urgency in order to get the victim to act on impulse and not think rationally about the email, such as their PayPal account being restricted, or an unauthorized purchase on their Amazon account. The email will contain a link to a website, typically a login page, that will look identical to the legitimate website that they are impersonating. Once the user enters their credentials on the fake website, the cyber criminal will have access to their credentials and can access the victim’s accounts and even personal details.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/phishing_diagram.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">How Phishing Works</figcaption><p></p>
+<p></p><figcaption class="figure-caption">How Phishing Works (from Cloudflare)</figcaption><p></p>
 </figure>
 </div>
 <p>The easiest way to tell if a website is “phishy” or not is to look at the URL of the page, oftentimes the url will be somewhat similar to the original, or not close at all in hopes that the victim doesn’t even look.</p>
@@ -92,20 +92,142 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Notice how in the above example, the URL “paypal–accounts.com” is similar to, but not exactly the same as the original login page “paypal.com”. This is a common tactic used by cyber criminals to trick users into thinking that the website is legitimate.</p>
+<p>Being able to effectively determine whether a website is a phishing scam or not is a very important skill to have, especially for those who are not tech savvy. This is because phishing scams are becoming more and more sophisticated, and it is becoming harder and harder to tell if a website is legitimate or not. This is why it is important to have a tool that can help users determine whether a website is a phishing website or not aside from their own intuition. This is where this project comes in.</p>
 </section>
 <section id="data-mining-task" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Data Mining Task</h1>
+<p>The data mining task is to discern the optimal classifier method to use to predict whether a website is a phishing website or legitimate based on the URL attributes of the website.</p>
+<p>The dataset contains 11055 websites, with each website having 30 attributes that characterize the website. The attributes are split into 3 categories: Address Bar Based Features, Abnormal Based Features, and Domain Based Features. The dataset also contains a label that states whether the website is a phishing website (-1) or legitimate (1). The goal is to use the attributes of the websites to predict whether the website is a phishing website or not.</p>
+<section id="dataset" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="dataset"><span class="header-section-number">2.1</span> Dataset</h2>
+<p>The dataset comes from the University of California Irvine’s Machine Learning Repository. The dataset contains information about 11055 websites and features found in their URLs that characterize a possible phishing website. There are 3 main categories that can show that a website is “phishy.”</p>
+<p><strong>1. Address Bar Based Features</strong><br>
+Address bar features of a phishing website is usually the quickest and most obvious way to tell if a website is a phishing website or not. These features include:</p>
+<ul>
+<li>Adding a prefix or suffix to the domain name of the website with a hyphen</li>
+<li>Having a subdomain or multiple subdomains</li>
+<li>Use of a shortening service like bit.ly</li>
+<li>Low domain registration age</li>
+<li>URL Length &gt; 54 characters</li>
+<li>Having an @ symbol in the URL</li>
+<li>Has an IP address in the URL</li>
+</ul>
+<p><strong>2. Abnormal Features</strong><br>
+These features usually have to do with the content of the website and the underlying scripts that go on in the background.</p>
+<ul>
+<li>If the images in a website are loaded in from an external domain</li>
+<li>Minimal use of <code>&lt;meta&gt;</code> tags</li>
+<li>If a Server Form Handler is used</li>
+<li>If a web form redirects information to an email by using a <code>mailto:</code> tag</li>
+</ul>
+<p><strong>3. HTML &amp; Javascript Based Features</strong></p>
+<ul>
+<li>Multiple website redirections</li>
+<li>Status bar customization using JavaScript to display a fake URL</li>
+<li>Disabling the right click on the website</li>
+<li>Using popups</li>
+<li>Iframes come from a different domain</li>
+</ul>
+<p><strong>4. Domain Based Features</strong></p>
+<ul>
+<li>Unusually young domain age</li>
+<li>Low volume of traffic</li>
+<li>Where the domain ranks in Alexa’s top 1 million websites</li>
+<li>If the domain has been indexed by Google</li>
+</ul>
+</section>
 </section>
 <section id="technical-approach" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Technical Approach</h1>
+<section id="data-partitioning" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="data-partitioning"><span class="header-section-number">3.1</span> Data Partitioning</h2>
+<p>The data was split into a training and testing set along an 80/20 split. The training set was used to train the different classifier models, and the testing set was used to evaluate the performance of the models.</p>
+<p>Cross validation was not performed because cross validation would have resulted in a much smaller training set, which would have resulted in a less accurate model.</p>
 </section>
-<section id="results" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Results</h1>
-<section id="resources" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="resources"><span class="header-section-number">4.1</span> Resources</h2>
+<section id="classifier-methods" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="classifier-methods"><span class="header-section-number">3.2</span> Classifier Methods</h2>
+<p>Due to the nature of the dataset, it is clear that this dataset requires supervised learning. And the boolean nature of the labels makes this a classification problem. The classifier methods I used were:</p>
+<ul>
+<li>Decision Tree</li>
+<li>Random Forest</li>
+<li>Logistic Regression</li>
+<li>Linear Support Vector Machine</li>
+</ul>
+<p>These methods were chosen because they are all relatively simple to implement and are very popular in real-world uses today.</p>
+</section>
+</section>
+<section id="evaluation-methodology" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Evaluation Methodology</h1>
+<p>The dataset derives from a collection of 11055 websites, with each index containing attributes of the website’s URL and its features. The examples were sourced by UCI by crawling the web and collecting the URLs of phishing websites and legitimate websites.</p>
+<p>The models were tested for accuracy of classification using the split testing set. The accuracy of the models was measured by the number of correct predictions divided by the total number of predictions.</p>
+</section>
+<section id="results" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Results</h1>
+<p>After fitting each model to the training set and testing it on the testing set, the results are as follows and are organized in descending order of accuracy:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Model</th>
+<th style="text-align: center;">Testing Accuracy (%)</th>
+<th style="text-align: center;">Training Accuracy (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Random Forest</td>
+<td style="text-align: center;">93.09</td>
+<td style="text-align: center;">93.44</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Binary Logistic Regression</td>
+<td style="text-align: center;">92.94</td>
+<td style="text-align: center;">92.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Linear SVM</td>
+<td style="text-align: center;">92.84</td>
+<td style="text-align: center;">92.85</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Decision Tree</td>
+<td style="text-align: center;">92.18</td>
+<td style="text-align: center;">92.49</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/comparison.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Accuracy of Different Models</figcaption><p></p>
+</figure>
+</div>
+<p>With all of the models having a relatively balanced training and testing accuracy, it is safe to say that the models are not overfitting or underfitting the data.</p>
+<section id="reasoning-for-results" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="reasoning-for-results"><span class="header-section-number">5.1</span> Reasoning for Results</h2>
+<p>The Random Forest Classifier model performed the best out of the four models, with an accuracy of 93.09% on the testing set. This is due to the fact that the Random Forest Classifier is an ensemble method that uses multiple decision trees that are each slightly different from each other.</p>
+</section>
+<section id="confusion-matrix" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="confusion-matrix"><span class="header-section-number">5.2</span> Confusion Matrix</h2>
+<p>Out of all of the confusion matrices, the decision tree model had the least false positives and false negatives. Which is interesting becaues it is the least accurate model out of the four even though its accuracy is still fantastic.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/decision_tree_confusion.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Confusion Matrix of Decision Tree Model</figcaption><p></p>
+</figure>
+</div>
+<p>This is due to the fact that the decision tree model contains every single feature in the dataset, which means that its more likely to minimize false positives and false negative.</p>
+</section>
+<section id="what-i-learned" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">5.3</span> What I learned</h2>
+<p>From this project I learned how to properly use the different classifier methods and sci-kit learn as a whole. I also learned how to properly evaluate the performance of a model and how to make sure that the data allows for the model to be evaluated properly.</p>
+<p>To further my analysis, I would like to try to build a program built off of the models that I’ve used that can take in a URL from input or as a browser extension and predict whether the current website a user is on is a phishing website or not.</p>
+</section>
+</section>
+<section id="resources" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Resources</h1>
 <p>https://www.cloudflare.com/learning/access-management/phishing-attack/</p>
 <p>https://www.cybertalk.org/2022/03/30/top-15-phishing-attack-statistics-and-they-might-scare-you/</p>
-</section>
+<p>https://www.verizon.com/business/resources/reports/dbir/2022/master-guide/</p>
 </section>
 
 </main>

@@ -1,0 +1,25 @@
+Criteria for feature extraction:
+- [x] Has IP address in url
+- [x] URL is longer than 54 characters
+- [x] URL uses a shortening service
+- [x] URL has a @ symbol
+- [x] Redirects using //
+- [x] URL has a dash
+- [x] URL has subdomain and multi subdomains
+- [x] Doesn't use HTTPS
+- [x] Short domain registration length
+- [x] Favicon loaded from different domain
+- [ ] Uses non-standard port
+- [ ] HTTPS is in the domain part of the URL
+- [x] Multiple redirects
+- [ ] Customized status bar
+- [x] Disabling right click
+- [x] Using popups
+- [x] Using iframe
+- [ ] Young age of domain
+- [ ] no DNS record
+- [ ] Low traffic (low Alexa rank)
+- [x] Page rank
+- [ ] Google index
+- [ ] Number of links pointing to page
+- [ ] Statistical report

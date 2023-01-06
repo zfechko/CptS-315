@@ -1,0 +1,32 @@
+---
+title: "Detecing Phishing Websites Using Machine Learning"
+author: "Zach Fechko"
+format:
+    revealjs:
+        theme: moon
+        transition: slide
+        width: 1920
+        height: 1080
+---
+
+
+## Motivation { .incremental}
+
+![](images/Phish_website_example.png){height=70%, width=70%, .center}
+ 
+- As someone who uses the internet on a daily basis, I've gotten my fair share of phishing emails.
+- I wanted to see if there was a way to detect "phishy" websites using machine learning.
+- Having a tool that tells you if a website is a phishing website would be a huge benefit to both individuals and organizations.
+
+::: {.notes}
+- Being able to detect phishing websites is an important skill for anybody who uses the internet to have. And is a reason companies put so much effort into periodically training their employees to spot phishing emails.
+- While this training may work, it's not a perfect solution. Phishing emails have become more sophisitaced over the years, and it's not uncommon for even cybersecurity professionals to fall for them.
+- If there was a way to easily detect phishing websites without having to train employees, it would be a huge benefit to both individuals and organizations.
+- This is where the use of machine learning comes in.
+:::
+
+## ML Problem {.smaller .incremental}
+The goal of this project is to find the optimal machine learning model that can detect phishing websites with the highest accuracy possible based on the features of the website and its URL.
+
+## Dataset
+The dataset used for this project was obtained from the UCI Machine Learning Repository. It contains aspects of 11055 websites
